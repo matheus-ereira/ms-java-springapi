@@ -7,5 +7,5 @@ package com.mpjavaspringapi.domain.enums;
  */
 public enum Role {
     ADMINISTRATOR,
-    AGENT
+    SIMPLE
 }
