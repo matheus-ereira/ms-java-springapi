@@ -2,6 +2,8 @@
 package com.mpjavaspringapi.domain;
 
 import com.mpjavaspringapi.domain.enums.RequestState;
+
+import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 import javax.persistence.Column;
@@ -29,9 +31,14 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data @Builder
 @Entity(name = "request")
-public class Request {
+public class Request implements Serializable{
     
-    @Id
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
